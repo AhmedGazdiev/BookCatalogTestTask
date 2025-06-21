@@ -1,0 +1,17 @@
+.card {
+  width: 280px;
+  height: 220px;
+  position: relative;
+  margin: 6px;
+}
+
+mat-card-content {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+button {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}

@@ -1,0 +1,18 @@
+<mat-form-field>
+  <mat-label>Поиск</mat-label>
+  <input
+    matInput
+    type="text"
+    [value]="searchQuery$ | async"
+    (input)="onSearch($any($event.target).value)"
+    placeholder="Поиск..."
+  />
+</mat-form-field>
+
+<div class="list">
+  @if(filteredBooks$ | async; as books) { @for(book of books; track book.id) {
+  <book-card [book]="book" />
+  } }
+</div>
+
+<button matButton="filled" (click)="openDialog()">Добавиь книгу</button>

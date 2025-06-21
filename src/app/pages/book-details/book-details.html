@@ -1,0 +1,25 @@
+<mat-card class="book-detail-container" appearance="outlined">
+  <div class="book-info">
+    <mat-card-header>
+      <mat-card-title>{{book()?.title}}</mat-card-title>
+      <mat-card-subtitle>Автор: {{book()?.author}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="meta-info">
+        <span class="genre">{{ book()?.genre }}</span>
+        <span class="pages">{{ book()?.pages }} стр.</span>
+        <span class="language">{{ book()?.language }}</span>
+        <span class="date"> {{ book()?.publishedDate | date }} </span>
+      </div>
+
+      <div class="description">
+        <h3>Описание</h3>
+        <p>{{ book()?.description }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button matButton="filled" routerLink="/books">Назад</button>
+    </mat-card-actions>
+  </div>
+</mat-card>
