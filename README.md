@@ -13,3 +13,9 @@ npm i
 ```bash
 ng serve
 ```
+
+Чтобы запустить API сервер, запустите:
+
+```bash
+npm run server
+```
